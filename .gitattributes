@@ -1,0 +1,2 @@
+JProject-server/jmdict-eng-3.5.0.json filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
