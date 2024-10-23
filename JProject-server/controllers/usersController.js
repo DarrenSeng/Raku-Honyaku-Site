@@ -21,8 +21,8 @@ const createUser = async (req, res) => {
             userId: user._id,
             token: crypto.randomBytes(32).toString("hex"),
         }).save();
-
-        const url = `${process.env.BASE_URL}/api/users/${user.id}/verify/${token.token}`;
+        //should be 3001
+        const url = `${process.env.EMAIL_URL}/api/users/${user.id}/verify/${token.token}`;
         await sendEmail(user.email, "Verify Email", url);
 
         res.status(201).send({ message: "An email sent to your account please verify" });
